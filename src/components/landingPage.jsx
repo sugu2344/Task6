@@ -1,7 +1,7 @@
 const LandingPage = () => {
   return (
     <>
-      <div className="pt-16"></div>
+      <div className="py-16"></div>
     </>
   );
 };
