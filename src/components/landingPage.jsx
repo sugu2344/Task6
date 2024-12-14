@@ -9,7 +9,7 @@ const LandingPage = () => {
         return response.json();
       })
       .then((data) => {
-        // console.log(data, ".then2");
+        console.log(data, ".then2");
         setProducts(data);
       })
       .catch((error) => console.log("error in fetching", error));
