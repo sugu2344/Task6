@@ -1,19 +1,31 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./components/Home";
+// import HomePage from "./components/Home";
 import Cart from "./components/cart";
+import LandingPage from "./components/landingPage";
+import Navbar from "./components/navbar";
 
 const App = () => {
   const routes = [
     {
       path: "/",
-      element: <HomePage />,
+      element: <Navbar />,
       // loader: userloader;
       // hydrateFallBackElement:<div>Loading.....</div>
+      children: [
+        {
+          path: "cart",
+          element: <Cart />,
+        },
+        {
+          path: "landingpage",
+          element: <LandingPage />,
+        },
+      ],
     },
-    {
-      path: "/Cart-Page",
-      element: <Cart />,
-    },
+    // {
+    //   path: "/Cart-Page",
+    //   element: <Cart />,
+    // },
   ];
   let router = createBrowserRouter(routes, {
     future: {

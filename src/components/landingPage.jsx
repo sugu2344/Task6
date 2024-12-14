@@ -5,11 +5,11 @@ const LandingPage = () => {
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((response) => {
-        console.log(response, ".then1");
+        // console.log(response, ".then1");
         return response.json();
       })
       .then((data) => {
-        console.log(data, ".then2");
+        // console.log(data, ".then2");
         setProducts(data);
       })
       .catch((error) => console.log("error in fetching", error));
