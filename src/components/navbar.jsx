@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
+  console.log(cart);
   return (
     <>
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -18,10 +19,15 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div>
-            <span className="material-symbols-outlined text-3xl font-bold">
-              shopping_cart
-            </span>
+          <div className="flex flex-row space-x-1">
+            <div>
+              <span className="material-symbols-outlined text-3xl font-bold">
+                shopping_cart
+              </span>
+            </div>
+            <div>
+              <p>{cart}</p>
+            </div>
           </div>
         </div>
       </header>

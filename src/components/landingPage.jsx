@@ -1,7 +1,9 @@
+import Navbar from "./navbar";
 import { useEffect, useState } from "react";
 
 const LandingPage = () => {
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState(0);
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((response) => {
@@ -14,6 +16,10 @@ const LandingPage = () => {
       })
       .catch((error) => console.log("error in fetching", error));
   }, []);
+
+  function HandleAddToCart() {
+    setCart(cart + 1);
+  }
   return (
     <>
       <div className="py-16 my-3 mx-3">
@@ -39,7 +45,10 @@ const LandingPage = () => {
                     <div className="flex justify-center mt-auto">
                       <p className="text-lg font-medium">₹ {product.price}</p>
                     </div>
-                    <button className="border-2 p-2 rounded-xl hover:bg-black hover:text-white cursor-pointer ">
+                    <button
+                      onClick={HandleAddToCart}
+                      className="border-2 p-2 rounded-xl hover:bg-black hover:text-white cursor-pointer "
+                    >
                       Add to Cart
                     </button>
                   </div>
@@ -50,6 +59,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+      <Navbar cart={cart} />
     </>
   );
 };
