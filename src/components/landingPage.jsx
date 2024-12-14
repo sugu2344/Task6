@@ -9,7 +9,8 @@ const LandingPage = () => {
               <img src="https://placehold.co/600x400" alt="Product" />
               <div className="flex flex-col justify-between flex-grow text-center space-y-3 mt-3">
                 <h1 className="font-bold text-2xl">Title</h1>
-                <p className="text-lg font-medium">₹Price</p>
+                <p className="text-justify flex justify-center">Description</p>
+                <p className="text-lg font-medium">₹ Price</p>
                 <button className="border-2 p-2 rounded-xl hover:bg-black hover:text-white cursor-pointer mt-auto">
                   Add to Cart
                 </button>
