@@ -1,8 +1,8 @@
 const LandingPage = () => {
   return (
-    <div>
-      <h1>landing page</h1>
-    </div>
+    <>
+      <div className="pt-16"></div>
+    </>
   );
 };
 
