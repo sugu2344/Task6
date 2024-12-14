@@ -1,6 +1,10 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const Navbar = ({ cart }) => {
+  const navigate = useNavigate();
+  function HandleClick() {
+    navigate("/cart");
+  }
   console.log(cart);
   return (
     <>
@@ -21,7 +25,10 @@ const Navbar = ({ cart }) => {
           </div>
           <div className="flex flex-row space-x-1">
             <div>
-              <span className="material-symbols-outlined text-3xl font-bold">
+              <span
+                onClick={HandleClick}
+                className="material-symbols-outlined text-3xl font-bold cursor-pointer"
+              >
                 shopping_cart
               </span>
             </div>
