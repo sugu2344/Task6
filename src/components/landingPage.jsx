@@ -24,16 +24,22 @@ const LandingPage = () => {
               return (
                 <div
                   key={product.id}
-                  className="w-full sm:w-[45%] md:w-[30%] lg:w-[23%] border-2 bg-white p-4 flex flex-col"
+                  className="w-full sm:w-[45%] md:w-[30%] lg:w-[23%] border-2 bg-white p-4 flex flex-col min-h-[600px]"
                 >
-                  <img src={product.image} alt={product.title} />
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="h-[180px] object-cover"
+                  />
                   <div className="flex flex-col justify-between flex-grow text-center space-y-3 mt-3">
                     <h1 className="font-bold text-2xl">{product.title}</h1>
                     <p className="text-justify flex justify-center">
                       {product.description}
                     </p>
-                    <p className="text-lg font-medium">₹ {product.price}</p>
-                    <button className="border-2 p-2 rounded-xl hover:bg-black hover:text-white cursor-pointer mt-auto">
+                    <div className="flex justify-center mt-auto">
+                      <p className="text-lg font-medium">₹ {product.price}</p>
+                    </div>
+                    <button className="border-2 p-2 rounded-xl hover:bg-black hover:text-white cursor-pointer ">
                       Add to Cart
                     </button>
                   </div>
