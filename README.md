@@ -1,10 +1,10 @@
-# **Shopping Cart Application**
+# **Shopping Cart Application 🛒**
 
-## **Overview**
+## ** 📌Overview 🏌️‍♀️**
 
-This is a React.js application that simulates an e-commerce experience by interacting with the Fake Store API to fetch and display products. It features a product page, a cart page, and the ability to add/remove items from the cart, along with a dynamic total price calculation.
+This is a React.js application that simulates an e-commerce experience by interacting with the Fake Store API to fetch and display products. It features a product page, a cart page, and the ability to add/remove items from the cart, along with a dynamic total price calculation.🏌️‍♀
 
-## **Features**
+## **Features 🔎**
 
 - **Product Listing Page**
   - Fetches a list of products from the Fake Store API and displays them in a responsive layout.
@@ -16,7 +16,7 @@ This is a React.js application that simulates an e-commerce experience by intera
   - Includes an "Add to Cart" button that adds the selected product to the cart.
   - If the product is already in the cart, the button changes to "Remove from Cart," allowing the user to remove it.
 
-- **Cart Page**
+- ** 🔔Cart Page 🛍️**
   - Displays all items added to the cart with detailed information:
     - Product Image
     - Title
@@ -26,8 +26,8 @@ This is a React.js application that simulates an e-commerce experience by intera
   - Dynamically updates the cart's total price and applies a 10% discount on the total amount.
   - Includes a "Remove from Cart" button to delete individual items from the cart.
 
-- **Routing**
-  - Proper routing between the Product Page and the Cart Page is implemented using React Router.
+- **👈Routing👉**
+  - Proper routing between the 📤Product Page and the Cart Page 📥 is implemented using React Router.
 
 
 This task description explains the project objectives, key features, and tools used, making it ideal for the README file. Let me know if you need help writing the complete README! 😊
@@ -77,6 +77,13 @@ This task description explains the project objectives, key features, and tools u
 #### mobile  responsive view cart details amount summary
 
 ![mobile cart pic 3](https://github.com/user-attachments/assets/aea726ef-ad63-4440-85f0-361f3421e4be)
+
+
+
+
+
+
+
 
 ## Demo-Clip
 
