@@ -1,11 +1,14 @@
+import { useContext } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
+import cartContext from "../contexts/cartcontext";
 
-const Navbar = ({ cart }) => {
+const Navbar = () => {
   const navigate = useNavigate();
+  const { cart } = useContext(cartContext);
+  
   function HandleClick() {
     navigate("/cart");
   }
-  console.log(cart);
   return (
     <>
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">

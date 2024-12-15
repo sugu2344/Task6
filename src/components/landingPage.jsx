@@ -1,9 +1,10 @@
-import Navbar from "./navbar";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import cartContext from "../contexts/cartcontext";
 
 const LandingPage = () => {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState(0);
+  const { cart, setCart } = useContext(cartContext);
+
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((response) => {
@@ -20,6 +21,7 @@ const LandingPage = () => {
   function HandleAddToCart() {
     setCart(cart + 1);
   }
+
   return (
     <>
       <div className="py-16 my-3 mx-3">
@@ -59,7 +61,6 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <Navbar cart={cart} />
     </>
   );
 };
