@@ -38,7 +38,6 @@ const Cart = () => {
         {cartItems.map((item) => (
           <div key={item.id} className="bg-white mb-2 rounded-lg">
             <div className="flex flex-col sm:flex-row justify-between px-3 py-3 items-center sm:items-start">
-              {/* Product Column */}
               <div className="flex flex-row items-center mb-2 sm:mb-0 sm:w-[35%]">
                 <img
                   src={item.image}
@@ -85,6 +84,9 @@ const Cart = () => {
             </div>
           </div>
         ))}
+        <div className="py-12">
+          <hr className="border-t-4 h-10 border-black w-[85%] mx-auto"></hr>
+        </div>
       </div>
     </div>
   );
