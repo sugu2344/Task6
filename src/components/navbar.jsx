@@ -5,9 +5,12 @@ import cartContext from "../contexts/cartcontext";
 const Navbar = () => {
   const navigate = useNavigate();
   const { cart } = useContext(cartContext);
-  
+
   function HandleClick() {
     navigate("/cart");
+  }
+  function handleHome() {
+    navigate("/");
   }
   return (
     <>
@@ -18,12 +21,14 @@ const Navbar = () => {
           </div>
           <div>
             <ul className="flex flex-row justify-between items-center space-x-6 font-bold">
-              <li>
+              {/* <li>
                 <a href="#">Home</a>
               </li>
               <li>
                 <a href="#footer">Footer</a>
-              </li>
+              </li> */}
+              <button onClick={handleHome}>Home</button>
+              <button onClick={HandleClick}>Cart</button>
             </ul>
           </div>
           <div className="flex flex-row space-x-1">
