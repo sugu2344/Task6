@@ -4,10 +4,7 @@ import cartContext from "../contexts/cartcontext";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const { cartItems } = useContext(cartContext);
-
-  const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-
+  const { cartLength } = useContext(cartContext); 
   return (
     <>
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -25,7 +22,7 @@ const Navbar = () => {
             >
               shopping_cart
             </span>
-            <p>{totalQuantity}</p>
+            <p>{cartLength}</p>
           </div>
         </div>
       </header>

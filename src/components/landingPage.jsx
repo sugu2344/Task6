@@ -3,7 +3,7 @@ import cartContext from "../contexts/cartcontext";
 
 const LandingPage = () => {
   const [products, setProducts] = useState([]);
-const { addToCart, cartItems, removeFromCart } = useContext(cartContext);
+  const { addToCart, cartItems, removeFromCart } = useContext(cartContext);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -18,17 +18,15 @@ const { addToCart, cartItems, removeFromCart } = useContext(cartContext);
       .catch((error) => console.log("error in fetching", error));
   }, []);
 
-  
   function handleCart(product) {
     const existingProduct = cartItems.find((item) => item.id === product.id);
 
     if (existingProduct) {
-      removeFromCart(product.id); 
+      removeFromCart(product.id);
     } else {
-      addToCart(product); 
+      addToCart(product);
     }
   }
-
 
   return (
     <div className="py-16 my-3 mx-3">
@@ -52,7 +50,11 @@ const { addToCart, cartItems, removeFromCart } = useContext(cartContext);
                   <p className="text-lg font-medium">₹ {product.price}</p>
                   <button
                     onClick={() => handleCart(product)}
-                    className="border-2 p-2 rounded-xl hover:bg-black hover:text-white cursor-pointer"
+                    className={`border-2 p-2 rounded-xl cursor-pointer hover:bg-[orange] ${
+                      isInCart
+                        ? "bg-red-500 text-white"
+                        : "bg-[green] text-white"
+                    }`}
                   >
                     {isInCart ? "Remove from Cart" : "Add to Cart"}
                   </button>
