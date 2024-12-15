@@ -10,12 +10,19 @@ const Cart = () => {
         <div className="bg-[#Eb4511] text-white text-2xl py-2 px-2 rounded-lg">
           <h1>Your Cart</h1>
         </div>
-        <div className="hidden sm:flex flex-row justify-between px-5 py-3 items-center">
-          <h1>Product</h1>
-          <p>Price</p>
-          <p>Quantity</p>
-          <p>Total Price</p>
-        </div>
+
+        {cartItems.length === 0 ? (
+          <div className="text-center py-5 text-xl text-blue-400">
+            No items in the cart.
+          </div>
+        ) : (
+          <div className="hidden sm:flex flex-row justify-between px-5 py-3 items-center">
+            <h1>Product</h1>
+            <p>Price</p>
+            <p>Quantity</p>
+            <p>Total Price</p>
+          </div>
+        )}
 
         {cartItems.map((item) => (
           <div key={item.id} className="bg-white mb-2 rounded-lg">
