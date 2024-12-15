@@ -37,7 +37,7 @@ const LandingPage = () => {
             return (
               <div
                 key={product.id}
-                className="w-full sm:w-[45%] md:w-[30%] lg:w-[23%] border-2 bg-white p-4 flex flex-col min-h-[700px]"
+                className="w-full sm:w-[45%] md:w-[30%] lg:w-[23%] border-2 bg-white p-4 flex flex-col min-h-[100px]"
               >
                 <img
                   src={product.image}
