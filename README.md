@@ -132,3 +132,17 @@ npx tailwindcss init -p
 ```bash
 npm install react-router-dom@V6
 ```
+
+
+## API Reference
+
+
+#### GET
+```http
+https://fakestoreapi.com/products
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
