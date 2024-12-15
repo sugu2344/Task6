@@ -31,13 +31,13 @@ const LandingPage = () => {
   return (
     <div className="py-16 my-3 mx-3">
       <div className="bg-[#F7F7F2] px-5 py-10">
-        <div className="flex flex-wrap gap-4 p-5 bg-[#EFF7F6]">
+        <div className="flex flex-wrap gap-4 p-5 bg-[#EFF7F6]  justify-center">
           {products.map((product) => {
             const isInCart = cartItems.some((item) => item.id === product.id);
             return (
               <div
                 key={product.id}
-                className="w-full sm:w-[45%] md:w-[30%] lg:w-[23%] border-2 bg-white p-4 flex flex-col min-h-[600px]"
+                className="w-full sm:w-[45%] md:w-[30%] lg:w-[23%] border-2 bg-white p-4 flex flex-col min-h-[700px]"
               >
                 <img
                   src={product.image}
@@ -45,8 +45,12 @@ const LandingPage = () => {
                   className="h-[180px] object-cover"
                 />
                 <div className="flex flex-col justify-between flex-grow text-center space-y-3 mt-3">
-                  <h1 className="font-bold text-2xl">{product.title}</h1>
-                  <p className="text-justify">{product.description}</p>
+                  <h1 className="font-bold text-2xl overflow-auto">
+                    {product.title}
+                  </h1>
+                  <p className="text-justify overflow-auto">
+                    {product.description}
+                  </p>
                   <p className="text-lg font-medium">₹ {product.price}</p>
                   <button
                     onClick={() => handleCart(product)}
