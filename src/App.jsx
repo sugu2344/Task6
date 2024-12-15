@@ -9,8 +9,6 @@ const App = () => {
     {
       path: "/",
       element: <HomePage />,
-      // loader: userloader;
-      // hydrateFallBackElement:<div>Loading.....</div>
       children: [
         {
           path: "/",
