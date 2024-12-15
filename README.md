@@ -37,13 +37,13 @@ This task description explains the project objectives, key features, and tools u
 
 
 
-
 ## Tech Stack
 ##### Html
 ##### Tailwindcss /css
 ##### Javascript
-##### React
+##### React  ![icons8-react](https://github.com/user-attachments/assets/3f6bdb40-b7a6-4476-9caf-ffb9cf48287f)
 ##### React-router
+
 
 
 ## Screenshots
