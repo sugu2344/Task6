@@ -4,7 +4,7 @@ import cartContext from "../contexts/cartcontext";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const { cartLength } = useContext(cartContext); 
+  const { cartLength } = useContext(cartContext);
   return (
     <>
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -15,14 +15,14 @@ const Navbar = () => {
             &nbsp; &nbsp;
             <button onClick={() => navigate("/cart")}>Cart</button>
           </div>
-          <div className="flex flex-row space-x-1">
-            <span
-              onClick={() => navigate("/cart")}
-              className="material-symbols-outlined text-3xl font-bold cursor-pointer"
-            >
+          <div
+            onClick={() => navigate("/cart")}
+            className="flex flex-row space-x-1"
+          >
+            <span className="material-symbols-outlined text-3xl font-bold cursor-pointer">
               shopping_cart
             </span>
-            <p>{cartLength}</p>
+            <p className="cursor-pointer">{cartLength}</p>
           </div>
         </div>
       </header>
